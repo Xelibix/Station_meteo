@@ -1,4 +1,8 @@
-
+unsigned long pos = 0;
+char valtemperature [6];
+String valtemperaturestring;
+String petitechaine = "";
+int cpt = 0;
 
 void sdread() {
    pinMode(A0, OUTPUT);

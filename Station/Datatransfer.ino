@@ -1,3 +1,5 @@
+String data = "";
+short j = 2;
 
 void Sendtemp()
 {
@@ -35,10 +37,9 @@ void Sendtemp()
 
     BTserial.println(demandedata());
     //Serial.println("part2");  //detecte quand on appuie sur le bouton demande
-    i = 0;
     res = "0";
     j++;
-    i = 0;          //Améliorable
+    clearbuf = 0;          //Améliorable
     res = "0";
     temp = "";
 
@@ -56,7 +57,7 @@ void Sendtemp()
     //    Serial.println(String(capteur.readTempC(),1)+String(capteur.readFloatPressure(),0)+String(capteur.readFloatHumidity(),0)); //Envoi des données capteurs
     BTserial.println(String(capteur.readTempC(), 1) + String(capteur.readFloatPressure(), 0) + String(capteur.readFloatHumidity(), 0)); //Envoi des données capteurs en temps réel
     //onetime=true;
-    i = 0;
+    clearbuf = 0;
     res = "0";
   }
   else {
@@ -66,7 +67,7 @@ void Sendtemp()
 
 void reset() //permet de clear les buffers et de reset j
 {
-  i = 0;
+  clearbuf = 0;
   res = "0";
   temp = "";
   j = 2;

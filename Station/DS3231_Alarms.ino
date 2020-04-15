@@ -1,5 +1,8 @@
 RtcDateTime temps;
 RtcDS3231<TwoWire> rtcObject(Wire);
+
+char times[10];
+
 void stockageheure() {
   RtcDateTime sotcktemps = rtcObject.GetDateTime();
  // Serial.println(sotcktemps);
